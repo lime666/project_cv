@@ -1,9 +1,29 @@
 <h1><%= @cv.position %></h1>
 
-<p>Hi, my name is <%= @cv.user_name %>.</p>
-<p>Education: <%= @cv.education %></p>
-<p>Experience: <%= @cv.experience %></p>
-<p>About info: <%= @cv.about %></p>
+<dl class="row">
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><%= @cv.user_name %></dd>
 
-<%= link_to 'Edit', edit_cv_path(@cv) %>
-<%= link_to 'Delete CV', cv_path(@cv), method: :delete, data: {confirm: 'Are you sure?'} %>
+  <dt class="col-sm-3">Education:</dt>
+  <dd class="col-sm-9"><%= @cv.education %></dd>
+
+  <dt class="col-sm-3">Experience:</dt>
+  <dd class="col-sm-9"><%= @cv.experience %></dd>
+
+  <dt class="col-sm-3">About info:</dt>
+  <dd class="col-sm-9"><%= @cv.about %></dd>
+</dl>
+
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to 'Edit', edit_cv_path(@cv), class: 'btn btn-outline-primary pull-xs-right' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Delete CV', cv_path(@cv), class: 'btn btn-outline-primary pull-xs-right', method: :delete, data: {confirm: 'Are you sure?'} %>
+      </li>
+    </ul>
+  </nav>
+</div>

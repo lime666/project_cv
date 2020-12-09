@@ -1,6 +1,16 @@
 <h1><%= @yulia_cv.position %></h1>
 
-<p>Hi, my name is <%= @yulia_cv.user_name %>.</p>
-<p>Education: <%= @yulia_cv.education %></p>
-<p>Experience: <%= @yulia_cv.experience %></p>
-<p>About info: <%= @yulia_cv.about %></p>
+<dl class="row">
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><%= @yulia_cv.user_name %></dd>
+
+  <dt class="col-sm-3">Education:</dt>
+  <dd class="col-sm-9"><%= @yulia_cv.education %></dd>
+
+  <dt class="col-sm-3">Experience:</dt>
+  <dd class="col-sm-9"><%= @yulia_cv.experience %></dd>
+
+  <dt class="col-sm-3">About info:</dt>
+  <dd class="col-sm-9"><%= @yulia_cv.about %></dd>
+
+</dl>
