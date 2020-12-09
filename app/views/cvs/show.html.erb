@@ -1,0 +1,9 @@
+<h1><%= @cv.position %></h1>
+
+<p>Hi, my name is <%= @cv.user_name %>.</p>
+<p>Education: <%= @cv.education %></p>
+<p>Experience: <%= @cv.experience %></p>
+<p>About info: <%= @cv.about %></p>
+
+<%= link_to 'Edit', edit_cv_path(@cv) %>
+<%= link_to 'Delete CV', cv_path(@cv), method: :delete, data: {confirm: 'Are you sure?'} %>

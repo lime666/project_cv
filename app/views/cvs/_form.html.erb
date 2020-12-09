@@ -1,0 +1,36 @@
+<%= form_for @cv do |f| %>
+
+  <div class="form-controll">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.label :user_email %>
+    <%= f.text_field :user_email %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.label :position %>
+    <%= f.text_field :position %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.label :education %>
+    <%= f.text_area :education %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.label :experience %>
+    <%= f.text_area :experience %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.label :about %>
+    <%= f.text_area :about %>
+  </div>
+
+  <div class="form-controll">
+    <%= f.submit 'Save all' %>
+  </div>
+<% end %>
